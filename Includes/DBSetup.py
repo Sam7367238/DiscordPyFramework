@@ -5,10 +5,10 @@ from colorama import Back, Fore, Style
 import time
 
 
+# Run this file by itself and it will set up your database.
 
 
-
-migrationSQL = """
+setupSQL = """
 CREATE TABLE IF NOT EXISTS Users (
     ID INT NOT NULL PRIMARY KEY,
     Money INT
@@ -20,21 +20,18 @@ CREATE TABLE IF NOT EXISTS Users (
 
 
 async def main():
-    await queryDatabase("../AppDatabase.db", migrationSQL)
+    await queryDatabase("../AppDatabase.db", setupSQL)
 
     prfx = (
-            Back.BLACK +
-            Fore.GREEN +
-            time.strftime(
-                "%H:%M:%S UTC",
-                time.gmtime()
-            ) +
+            Back.GREEN +
+            Fore.LIGHTWHITE_EX +
+            "SUCCESS" +
             Back.RESET +
             Fore.WHITE +
             Style.BRIGHT
     )
 
-    print(prfx + " Successfully Migrated Database")
+    print(prfx + Fore.LIGHTWHITE_EX + " Successfully Set Up Database")
 
 if __name__ == "__main__":
     initialize("../configuration.json")

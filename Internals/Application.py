@@ -5,11 +5,6 @@ from colorama import Back, Fore, Style
 import time
 import platform
 
-
-from Includes.Migration import migrationSQL
-from Internals.Database import queryDatabase
-
-
 class Application(commands.Bot):
     def __init__(self, command_prefix, views, intents):
         super().__init__(command_prefix, intents=intents, help_command=None)
@@ -35,8 +30,6 @@ class Application(commands.Bot):
 
         # for guild in bot.guilds:
         # print(f"- {guild.name} ({guild.id})")
-
-
 
     async def setup_hook(self) -> None:
         for view in self.views:
