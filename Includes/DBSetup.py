@@ -2,7 +2,6 @@ import asyncio
 from Internals.Configuration import initialize
 from Internals.Database import queryDatabase
 from colorama import Back, Fore, Style
-import time
 
 
 # Run this file by itself and it will set up your database.

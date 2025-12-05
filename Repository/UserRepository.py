@@ -13,3 +13,14 @@ class UserRepository:
         )
 
         return user
+
+    async def create(self):
+        ...
+
+    async def isRegistered(self, id):
+        user = await self.fetchOne(id)
+
+        if user:
+            return True
+        else:
+            return False

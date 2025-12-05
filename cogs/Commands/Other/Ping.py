@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 import datetime
-from Middleware.TestIntercept import testIntercept
+# from Middleware.TestIntercept import testIntercept
 
 class Ping(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -27,7 +27,6 @@ class Ping(commands.Cog):
         embed = discord.Embed(title=f":ping_pong: Pong!", color=color, timestamp=datetime.datetime.now())
         embed.add_field(name="Websocket", value=f"```json\n{latency} ms```", inline=False)
         await interaction.response.send_message(embed=embed)
-
 
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(Ping(bot))

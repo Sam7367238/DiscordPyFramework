@@ -16,4 +16,4 @@ async def fetchDatabase(filePath, sql, parameters = None, fetchMultiple = False)
             if fetchMultiple:
                 return await cursor.fetchall()
             else:
-                return await cursor.fetchone()[0]
+                return await cursor.fetchone()

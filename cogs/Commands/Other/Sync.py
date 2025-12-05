@@ -9,7 +9,6 @@ class Sync(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="sync", description="Sync all app commands.")
-    @app_commands.checks.cooldown(1, 120, key=lambda i: (i.guild.id, i.user.id))
     async def sync(self, interaction: discord.Interaction):
         botInfo = await self.bot.application_info()
 
