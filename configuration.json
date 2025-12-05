@@ -1,0 +1,7 @@
+{
+  "intents": {
+    "message_content": true,
+    "presences": true,
+    "members": true
+  }
+}
