@@ -11,3 +11,5 @@ Note:
 This will automatically create an AppDatabase.db file. When using database tools in repositories, be sure the file path is "AppDatabase.db", it is designed like that because of some...complications.
 
 There will be no tutorial because I'm not motivated to make it.
+
+I feel like getting set up with this is complicated, I'll do something about this in the future.
